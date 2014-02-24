@@ -6,6 +6,7 @@ public class Game : MonoBehaviour {
 	public string WasHitMsg = "WasHit";
 	public string DestroySelfMsg = "DestroySelf";
 	public int Score = 0;
+	public int Lives = 3;
 	public Transform NPCSpawnRoot;
 	public Transform boundaryBL;
 	public Transform boundaryTR;
@@ -25,9 +26,16 @@ public class Game : MonoBehaviour {
 		Data = this;
 	}
 
-	public void IncreaseScore(int scoreBonus) {
+	public void IncreaseScore(int scoreBonus) 
+	{
 		Score += scoreBonus;
 		GUIScore.text = "Score: " + Score;
+	}
+
+	public void DecreaseLives(int lives)
+	{
+		Lives -= lives;
+		GUILives.text = "Lives: " + Lives;
 	}
 
 	public void NPCSpawn() 
