@@ -573,7 +573,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MissileShot: {fileID: 400000, guid: 019f7894f68705942afba3bda2248e0f, type: 2}
   MissileSpawnPosition: {fileID: 518158515}
-  ReloadTime: 2
+  ReloadTime: 3
 --- !u!1 &1015174110
 GameObject:
   m_ObjectHideFlags: 0

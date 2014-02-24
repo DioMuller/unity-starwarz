@@ -764,6 +764,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Offset: {x: 0, y: 0, z: -1.5}
+  useRandomOffset: 1
+  percentageMinDifference: .5
+  percentageMaxDifference: 2
 --- !u!135 &13500000
 SphereCollider:
   m_ObjectHideFlags: 1

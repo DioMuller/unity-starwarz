@@ -16,6 +16,9 @@ public class Game : MonoBehaviour {
 
 	public void Start() {
 		InvokeRepeating("NPCSpawn", 1f, 4f);
+        InvokeRepeating("NPCSpawn", 1f, 4f);
+        InvokeRepeating("NPCSpawn", 1f, 2f);
+        InvokeRepeating("NPCSpawn", 1f, 2f);
 	}
 
 	void Awake () {
