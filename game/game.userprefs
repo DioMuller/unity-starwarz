@@ -1,8 +1,15 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Game.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\PlayerMover.cs">
     <Files>
-      <File FileName="Assets\Scripts\Game.cs" Line="18" Column="23" />
+      <File FileName="Assets\Scripts\Game.cs" Line="61" Column="36" />
+      <File FileName="e:\Pós\Programação com Engines\Trabalho\unity-starwarz\game\Assets\Scripts\SeekingMissile.cs" Line="16" Column="45" />
+      <File FileName="Assets\Scripts\OutOfBounds.cs" Line="5" Column="2" />
+      <File FileName="Assets\Scripts\NPCHull.cs" Line="15" Column="21" />
+      <File FileName="Assets\Scripts\MissileShoter.cs" Line="2" Column="1" />
+      <File FileName="Assets\Scripts\PlayerLives.cs" Line="10" Column="21" />
+      <File FileName="Assets\Scripts\Mover.cs" Line="23" Column="36" />
+      <File FileName="Assets\Scripts\PlayerMover.cs" Line="58" Column="3" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

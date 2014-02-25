@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using System.Collections;
 using System.Collections.Generic;
 
 public class Game : MonoBehaviour {
@@ -11,10 +12,12 @@ public class Game : MonoBehaviour {
 	public Transform NPCSpawnRoot;
 	public Transform boundaryBL;
 	public Transform boundaryTR;
+	public Transform playerShip;
 	public GameObject NPC;
 	public TextMesh GUIScore;
 	public TextMesh GUILives;
 	public List<Transform> LatestNPCs;
+	public int RespawnTime = 3;
 
 	public void Start() 
 	{
@@ -39,6 +42,26 @@ public class Game : MonoBehaviour {
 	{
 		Lives -= lives;
 		GUILives.text = "Lives: " + Lives;
+
+		RespawnShip ();
+	}
+
+	public void RespawnShip()
+	{
+		if (Lives > 0) 
+		{
+			StartCoroutine (SpawnAfterTime());
+		} 
+		else 
+		{
+			// TODO: GAME OVER
+		}
+	}
+
+	private IEnumerator SpawnAfterTime() 
+	{
+		yield return new WaitForSeconds(RespawnTime);
+		Instantiate(playerShip);
 	}
 
 	public void NPCSpawn() 

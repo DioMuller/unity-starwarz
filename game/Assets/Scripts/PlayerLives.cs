@@ -6,6 +6,7 @@ public class PlayerLives : MonoBehaviour
     public void WasHit()
     {
         Game.Data.DecreaseLives(1);
-        // TODO: Explode!
+        
+		Destroy(gameObject);
     }
 }

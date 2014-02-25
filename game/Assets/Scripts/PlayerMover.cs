@@ -1,24 +1,27 @@
 ﻿using UnityEngine;
 
-public class PlayerMover : MonoBehaviour {
-
+public class PlayerMover : MonoBehaviour 
+{
 	public float moveSpeed = 0.01f;
-	public Transform boundaryBL;
-	public Transform boundaryTR;
 	private Bounds _bounds;
 	private Vector3 _desiredPosition;
 	public float rotateSpeed = 2f;
 	public float maxRotationAngle = 60f;
 	private Quaternion startRotation, minRotation, maxRotation;
 
-	void Start () {
+	void Start () 
+	{
 		CalculateBounds();
 		startRotation = transform.rotation; //Quaternion.identity
 		minRotation = startRotation * Quaternion.Euler(0, 0, maxRotationAngle);
 		maxRotation = startRotation * Quaternion.Euler(0, 0, -maxRotationAngle);
 	}
 
-	private void CalculateBounds() {
+	private void CalculateBounds() 
+	{
+		var boundaryTR = Game.Data.boundaryTR;
+		var boundaryBL = Game.Data.boundaryBL;
+
 		_bounds = new Bounds(new Vector3((boundaryTR.position.x + boundaryBL.position.x)/2,
 										 (boundaryTR.position.y + boundaryBL.position.y)/2,
 										 (boundaryTR.position.z + boundaryBL.position.z)/2)
@@ -28,7 +31,8 @@ public class PlayerMover : MonoBehaviour {
 										 -boundaryTR.position.z - boundaryBL.position.z));
 	}
 
-	void Update () {
+	void Update () 
+	{
 		var dT = Time.deltaTime;
 		var horInput = Input.GetAxis("Horizontal");
 		var verInput = Input.GetAxis("Vertical");
@@ -37,7 +41,8 @@ public class PlayerMover : MonoBehaviour {
 
 		if (Mathf.Abs(horInput) > 0.1)
 			ApplyRotation(horInput, dT);
-		else {
+		else 
+		{
 			RestoreRotation(dT);
 		}
 
@@ -49,7 +54,8 @@ public class PlayerMover : MonoBehaviour {
 
 	}
 
-	private void ApplyRotation(float horInput, float dT) {
+	private void ApplyRotation(float horInput, float dT) 
+	{
 		if (horInput > 0.1f)
 			transform.rotation = Quaternion.RotateTowards(
 				transform.rotation, maxRotation, rotateSpeed*dT);
@@ -58,7 +64,8 @@ public class PlayerMover : MonoBehaviour {
 				transform.rotation, minRotation, rotateSpeed*dT);
 	}
 
-	private void RestoreRotation(float dT) {
+	private void RestoreRotation(float dT) 
+	{
 		transform.rotation = Quaternion.RotateTowards(
 			transform.rotation, Quaternion.identity, rotateSpeed * 4 * dT);		
 	}

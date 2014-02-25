@@ -13,7 +13,7 @@ public class Mover : MonoBehaviour {
     {
  	    if( useRandomOffset )
         {
-            Offset *= Random.RandomRange(percentageMinDifference, percentageMaxDifference);
+            Offset *= Random.Range(percentageMinDifference, percentageMaxDifference);
         }
  	}
 	
