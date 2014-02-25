@@ -1013,7 +1013,7 @@ MonoBehaviour:
   NPC: {fileID: 100030, guid: c7b53634c6f3f7b43bdf3b0d2d05d225, type: 2}
   GUIScore: {fileID: 1119573216}
   GUILives: {fileID: 1435987605}
-  latestNPC: {fileID: 0}
+  LatestNPCs: []
 --- !u!1 &1716455859
 GameObject:
   m_ObjectHideFlags: 0

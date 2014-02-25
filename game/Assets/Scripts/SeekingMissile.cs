@@ -8,12 +8,12 @@ public class SeekingMissile : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
 	{
-		if (Game.Data.latestNPC != null) 
+		if (Game.Data.LatestNPCs.Count != 0) 
 		{
 			var dT = Time.deltaTime;
 
 			var current = transform.rotation;
-			transform.LookAt (Game.Data.latestNPC);
+			transform.LookAt (Game.Data.LatestNPCs[0]);
 			var rotated = transform.rotation;
 
 			transform.rotation = Quaternion.RotateTowards (

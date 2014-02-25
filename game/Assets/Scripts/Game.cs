@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using System.Collections.Generic;
 
 public class Game : MonoBehaviour {
 
@@ -13,16 +14,18 @@ public class Game : MonoBehaviour {
 	public GameObject NPC;
 	public TextMesh GUIScore;
 	public TextMesh GUILives;
-	public Transform latestNPC;
+	public List<Transform> LatestNPCs;
 
-	public void Start() {
+	public void Start() 
+	{
 		InvokeRepeating("NPCSpawn", 1f, 4f);
-        InvokeRepeating("NPCSpawn", 1f, 4f);
         InvokeRepeating("NPCSpawn", 1f, 2f);
-        InvokeRepeating("NPCSpawn", 1f, 2f);
+
+		LatestNPCs = new List<Transform> ();
 	}
 
-	void Awake () {
+	void Awake () 
+	{
 		Data = this;
 	}
 
@@ -43,7 +46,7 @@ public class Game : MonoBehaviour {
 		float xpos = Random.Range(boundaryBL.position.x, boundaryTR.position.x);
 		Vector3 newSpawnPos = new Vector3(xpos, NPCSpawnRoot.position.y, NPCSpawnRoot.position.z);
 		var trans = Instantiate(NPC, newSpawnPos, Quaternion.identity) as GameObject;
-		latestNPC = trans.transform;
+		LatestNPCs.Insert (0, trans.transform);
 	}
 
 }

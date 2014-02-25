@@ -2,12 +2,16 @@
 
 public class NPCHull : MonoBehaviour {
 
-	public void WasHit() {
+	public void WasHit() 
+	{
 		Game.Data.IncreaseScore(1);
+		Game.Data.LatestNPCs.Remove (transform);
 		Destroy(gameObject);
 	}
 
-	public void DestroySelf() {
+	public void DestroySelf() 
+	{
+		Game.Data.LatestNPCs.Remove (transform);
 		Destroy(gameObject);
 	}
 
