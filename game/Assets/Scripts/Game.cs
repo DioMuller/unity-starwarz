@@ -16,8 +16,9 @@ public class Game : MonoBehaviour {
 	public GameObject NPC;
 	public TextMesh GUIScore;
 	public TextMesh GUILives;
+	public TextMesh GUIGameOver;
 	public List<Transform> LatestNPCs;
-	public int RespawnTime = 3;
+	public float RespawnTime = 3f;
 
 	public void Start() 
 	{
@@ -54,7 +55,7 @@ public class Game : MonoBehaviour {
 		} 
 		else 
 		{
-			// TODO: GAME OVER
+			GUIGameOver.renderer.enabled = true;
 		}
 	}
 
