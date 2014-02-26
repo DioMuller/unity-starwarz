@@ -6,6 +6,7 @@ public class NPCHull : MonoBehaviour {
 	{
 		Game.Data.IncreaseScore(1);
 		Game.Data.LatestNPCs.Remove (transform);
+		Game.Data.CreateExplosion(transform.position);
 		Destroy(gameObject);
 	}
 

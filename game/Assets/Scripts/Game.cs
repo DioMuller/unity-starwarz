@@ -13,6 +13,7 @@ public class Game : MonoBehaviour {
 	public Transform boundaryBL;
 	public Transform boundaryTR;
 	public Transform playerShip;
+	public Transform explosionEffect;
 	public GameObject NPC;
 	public TextMesh GUIScore;
 	public TextMesh GUILives;
@@ -63,6 +64,11 @@ public class Game : MonoBehaviour {
 	{
 		yield return new WaitForSeconds(RespawnTime);
 		Instantiate(playerShip);
+	}
+
+	public void CreateExplosion(Vector3 position)
+	{
+		Instantiate(explosionEffect, position, Quaternion.identity);
 	}
 
 	public void NPCSpawn() 
