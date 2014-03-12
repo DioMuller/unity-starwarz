@@ -24,7 +24,6 @@ public class Game : MonoBehaviour {
 	public void Start() 
 	{
 		InvokeRepeating("NPCSpawn", 1f, 4f);
-        InvokeRepeating("NPCSpawn", 1f, 2f);
 
 		LatestNPCs = new List<Transform> ();
 	}
@@ -78,5 +77,4 @@ public class Game : MonoBehaviour {
 		var trans = Instantiate(NPC, newSpawnPos, Quaternion.identity) as GameObject;
 		LatestNPCs.Insert (0, trans.transform);
 	}
-
 }

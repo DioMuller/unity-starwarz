@@ -13,7 +13,7 @@ public class NPCHull : MonoBehaviour {
 	public void DestroySelf() 
 	{
 		Game.Data.LatestNPCs.Remove (transform);
-		Destroy(gameObject);
+        Destroy(gameObject);
 	}
 
     public void OnTriggerEnter(Collider obstacle)
