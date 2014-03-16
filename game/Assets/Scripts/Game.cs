@@ -15,9 +15,14 @@ public class Game : MonoBehaviour {
 	public Transform playerShip;
 	public Transform explosionEffect;
 	public GameObject NPC;
+
+	#region GUI
 	public TextMesh GUIScore;
 	public TextMesh GUILives;
 	public TextMesh GUIGameOver;
+	public TextMesh GUIGameOverMessage;
+	#endregion GUI
+
 	public List<Transform> LatestNPCs;
 	public float RespawnTime = 3f;
 
@@ -31,6 +36,14 @@ public class Game : MonoBehaviour {
 	void Awake () 
 	{
 		Data = this;
+	}
+
+	void Update()
+	{
+		if( !Input.GetKeyDown(KeyCode.Escape) ) return;
+
+		// Only in case of Game Over.
+		if( Lives <= 0 ) Application.LoadLevel("starwarz-title");
 	}
 
 	public void IncreaseScore(int scoreBonus) 
@@ -56,6 +69,7 @@ public class Game : MonoBehaviour {
 		else 
 		{
 			GUIGameOver.renderer.enabled = true;
+			GUIGameOverMessage.renderer.enabled = true;
 		}
 	}
 
