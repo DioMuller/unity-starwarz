@@ -1031,9 +1031,9 @@ ParticleSystem:
     radius: 1
     angle: 25
     length: 5
-    boxX: 50
-    boxY: 1
-    boxZ: 1
+    boxX: 75
+    boxY: 50
+    boxZ: 10
     placementMode: 0
     m_Mesh: {fileID: 0}
     randomDirection: 0
@@ -1838,7 +1838,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 865955457}
   m_LocalRotation: {x: 1, y: 0, z: 0, w: -4.37113883e-08}
-  m_LocalPosition: {x: 0, y: 0, z: 3}
+  m_LocalPosition: {x: 0, y: -1.28592968, z: 3}
   m_LocalScale: {x: .100000001, y: .100000001, z: .100000001}
   m_Children: []
   m_Father: {fileID: 1567787297}
