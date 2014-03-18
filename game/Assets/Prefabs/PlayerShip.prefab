@@ -185,7 +185,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PlasmaShot: {fileID: 400000, guid: ef36c5af3768ce64abdc16ca6d345b9f, type: 2}
   PlasmaSpawnPosition: {fileID: 400002}
-  ReloadTime: .699999988
+  ReloadTime: .300000012
 --- !u!114 &11400004
 MonoBehaviour:
   m_ObjectHideFlags: 1

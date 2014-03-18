@@ -28,7 +28,7 @@ public class Game : MonoBehaviour {
 
 	public void Start() 
 	{
-		InvokeRepeating("NPCSpawn", 1f, 4f);
+		InvokeRepeating("NPCSpawn", 0f, 1f);
 
 		LatestNPCs = new List<Transform> ();
 	}
