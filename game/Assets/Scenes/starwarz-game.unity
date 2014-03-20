@@ -282,7 +282,7 @@ TextMesh:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 325311367}
-  m_Text: Game Over
+  m_Text: Game over
   m_OffsetZ: 0
   m_CharacterSize: 1
   m_LineSpacing: 1
@@ -292,7 +292,7 @@ TextMesh:
   m_FontSize: 14
   m_FontStyle: 3
   m_RichText: 1
-  m_Font: {fileID: 12800000, guid: b70830e06753fc4438d20933e845dd8f, type: 3}
+  m_Font: {fileID: 12800000, guid: d2054a2ee4034b5498ec96c71c3dcc0c, type: 3}
   m_Color:
     serializedVersion: 2
     rgba: 4278190335
@@ -308,7 +308,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: b70830e06753fc4438d20933e845dd8f, type: 3}
+  - {fileID: 2100000, guid: d2054a2ee4034b5498ec96c71c3dcc0c, type: 3}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -1902,7 +1902,7 @@ TextMesh:
   m_FontSize: 0
   m_FontStyle: 1
   m_RichText: 1
-  m_Font: {fileID: 12800000, guid: b70830e06753fc4438d20933e845dd8f, type: 3}
+  m_Font: {fileID: 12800000, guid: d2054a2ee4034b5498ec96c71c3dcc0c, type: 3}
   m_Color:
     serializedVersion: 2
     rgba: 4278255615
@@ -1918,7 +1918,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: b70830e06753fc4438d20933e845dd8f, type: 3}
+  - {fileID: 2100000, guid: d2054a2ee4034b5498ec96c71c3dcc0c, type: 3}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -2141,7 +2141,7 @@ TextMesh:
   m_FontSize: 0
   m_FontStyle: 1
   m_RichText: 1
-  m_Font: {fileID: 12800000, guid: b70830e06753fc4438d20933e845dd8f, type: 3}
+  m_Font: {fileID: 12800000, guid: d2054a2ee4034b5498ec96c71c3dcc0c, type: 3}
   m_Color:
     serializedVersion: 2
     rgba: 4278255615
@@ -2157,7 +2157,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: b70830e06753fc4438d20933e845dd8f, type: 3}
+  - {fileID: 2100000, guid: d2054a2ee4034b5498ec96c71c3dcc0c, type: 3}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -2277,7 +2277,7 @@ TextMesh:
   m_FontSize: 0
   m_FontStyle: 1
   m_RichText: 1
-  m_Font: {fileID: 12800000, guid: b70830e06753fc4438d20933e845dd8f, type: 3}
+  m_Font: {fileID: 12800000, guid: d2054a2ee4034b5498ec96c71c3dcc0c, type: 3}
   m_Color:
     serializedVersion: 2
     rgba: 4278190335
@@ -2293,7 +2293,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: b70830e06753fc4438d20933e845dd8f, type: 3}
+  - {fileID: 2100000, guid: d2054a2ee4034b5498ec96c71c3dcc0c, type: 3}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
