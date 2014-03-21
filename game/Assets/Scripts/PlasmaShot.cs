@@ -1,18 +1,33 @@
 ﻿using UnityEngine;
 
-public class PlasmaShot : MonoBehaviour {
+public class PlasmaShot : MonoBehaviour 
+{
+	/// <summary>
+	/// The target tag. Only targets with this tag will be hit.
+	/// </summary>
 	public string TargetTag = "NPC";
-	// Update is called once per frame
-	void OnTriggerEnter (Collider obstacle) {
+
+	/// <summary>
+	/// Collision Event. If the other object tag is TargetTag,
+	/// send a WasHit message to it.
+	/// </summary>
+	/// <param name="obstacle">Obstacle collider.</param>
+	void OnTriggerEnter (Collider obstacle) 
+	{
 		string tag = obstacle.gameObject.tag;
-		if ( tag == TargetTag ) 
-        {
-			obstacle.SendMessage(Game.Data.WasHitMsg);
-			DestroySelf();
-		}
+
+		if ( tag != TargetTag ) return;
+
+		obstacle.SendMessage(Game.Data.WasHitMsg);
+		DestroySelf();
 	}
 
-	public void DestroySelf() {
+	/// <summary>
+	/// Implementation of the DestroySelf message.
+	/// Destroys this object.
+	/// </summary>
+	public void DestroySelf() 
+	{
 		//Debug.Log("I was destroyed!");
 		Destroy(gameObject);
 	}

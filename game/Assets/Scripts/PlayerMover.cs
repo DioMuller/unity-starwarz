@@ -1,14 +1,53 @@
 ﻿using UnityEngine;
 
+/// <summary>
+/// Player mover component: Controls player movement and rotation.
+/// </summary>
 public class PlayerMover : MonoBehaviour 
 {
+	/// <summary>
+	/// Movement speed.
+	/// </summary>
 	public float moveSpeed = 0.01f;
-	private Bounds _bounds;
-	private Vector3 _desiredPosition;
-	public float rotateSpeed = 2f;
-	public float maxRotationAngle = 60f;
-	private Quaternion startRotation, minRotation, maxRotation;
 
+	/// <summary>
+	/// The rotation speed.
+	/// </summary>
+	public float rotateSpeed = 2f;
+
+	/// <summary>
+	/// The maximum rotation angle (Euler).
+	/// </summary>
+	public float maxRotationAngle = 60f;
+
+	/// <summary>
+	/// The desired position.
+	/// </summary>
+	private Vector3 _desiredPosition;
+
+	/// <summary>
+	/// Player initial rotation.
+	/// </summary>
+	private Quaternion startRotation;
+
+	/// <summary>
+	/// Player minimum rotation.
+	/// </summary>
+	private Quaternion minRotation;
+
+	/// <summary>
+	/// Player max rotation.
+	/// </summary>
+	private Quaternion maxRotation;
+
+	/// <summary>
+	/// The bounds where player can move.
+	/// </summary>
+	private Bounds _bounds;
+
+	/// <summary>
+	/// Initializes bounds and calculates rotations in Quaternions.
+	/// </summary>
 	void Start () 
 	{
 		CalculateBounds();
@@ -17,6 +56,9 @@ public class PlayerMover : MonoBehaviour
 		maxRotation = startRotation * Quaternion.Euler(0, 0, -maxRotationAngle);
 	}
 
+	/// <summary>
+	/// Calculates player movement bounds.
+	/// </summary>
 	private void CalculateBounds() 
 	{
 		var boundaryTR = Game.Data.boundaryTR;
@@ -31,6 +73,11 @@ public class PlayerMover : MonoBehaviour
 										 -boundaryTR.position.z - boundaryBL.position.z));
 	}
 
+	/// <summary>
+	/// Checks for inputs and move the player according to that.
+	/// Rotates the player a bit to the desired direction, and considers bounds when
+	/// calculating the new position.
+	/// </summary>
 	void Update () 
 	{
 		var dT = Time.deltaTime;
@@ -54,6 +101,11 @@ public class PlayerMover : MonoBehaviour
 
 	}
 
+	/// <summary>
+	/// Applies the rotation.
+	/// </summary>
+	/// <param name="horInput">Horizontal input.</param>
+	/// <param name="dT">Delta time.</param>
 	private void ApplyRotation(float horInput, float dT) 
 	{
 		if (horInput > 0.1f)
@@ -64,6 +116,10 @@ public class PlayerMover : MonoBehaviour
 				transform.rotation, minRotation, rotateSpeed*dT);
 	}
 
+	/// <summary>
+	/// Restores the rotation to the original position.
+	/// </summary>
+	/// <param name="dT">Delta Time.</param>
 	private void RestoreRotation(float dT) 
 	{
 		transform.rotation = Quaternion.RotateTowards(

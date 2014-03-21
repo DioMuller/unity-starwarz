@@ -1,5 +1,11 @@
 ﻿using UnityEngine;
 
+/// <summary>
+/// NPC hull component: General NPC script. This controls the
+/// NPC destruction in case of collision with the player or a
+/// projectile, and the NPC respawning in the case the NPC goes
+/// out of bounds.
+/// </summary>
 public class NPCHull : MonoBehaviour 
 {
 	/// <summary>
