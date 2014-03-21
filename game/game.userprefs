@@ -1,19 +1,20 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\PlayerShooter.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Fonts\About.txt">
     <Files>
+      <File FileName="Assets\Fonts\About.txt" Line="1" Column="15" />
       <File FileName="Assets\Scripts\Destroyer.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\PlayerShooter.cs" Line="65" Column="23" />
+      <File FileName="Assets\Scripts\PlayerShooter.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\EnemyShooter.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Game.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Mover.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\NPCHull.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\OutOfBounds.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\PlayerLives.cs" Line="43" Column="1" />
       <File FileName="Assets\Scripts\PlayerMover.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\SeekingMissile.cs" Line="24" Column="18" />
+      <File FileName="Assets\Scripts\SeekingMissile.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Title.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Shot.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\PlayerHit.cs" Line="26" Column="56" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
