@@ -1,11 +1,17 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\PlayerShooter.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Title.cs">
     <Files>
-      <File FileName="Assets\Scripts\PlayerShooter.cs" Line="56" Column="28" />
+      <File FileName="Assets\Scripts\PlayerShooter.cs" Line="25" Column="26" />
       <File FileName="Assets\Scripts\EnemyShooter.cs" Line="5" Column="100" />
       <File FileName="Assets\Scripts\Game.cs" Line="18" Column="35" />
-      <File FileName="Assets\Scripts\PlasmaShot.cs" Line="16" Column="20" />
+      <File FileName="Assets\Scripts\Mover.cs" Line="23" Column="16" />
+      <File FileName="Assets\Scripts\NPCHull.cs" Line="7" Column="1" />
+      <File FileName="Assets\Scripts\OutOfBounds.cs" Line="14" Column="35" />
+      <File FileName="Assets\Scripts\PlayerLives.cs" Line="12" Column="54" />
+      <File FileName="Assets\Scripts\PlayerMover.cs" Line="122" Column="30" />
+      <File FileName="Assets\Scripts\SeekingMissile.cs" Line="17" Column="16" />
+      <File FileName="Assets\Scripts\Title.cs" Line="21" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

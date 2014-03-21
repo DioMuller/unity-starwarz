@@ -807,7 +807,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EnemyShot: {fileID: 400004, guid: b9f37ce4eb243c549a98a3d2e8854521, type: 2}
-  EnemySpawnPosition: {fileID: 400032}
+  EnemyShotSpawnPosition: {fileID: 400032}
   ReloadTime: 3
 --- !u!135 &13500000
 SphereCollider:

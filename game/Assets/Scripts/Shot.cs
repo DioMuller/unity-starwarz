@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class PlasmaShot : MonoBehaviour 
+public class Shot : MonoBehaviour 
 {
 	/// <summary>
 	/// The target tag. Only targets with this tag will be hit.

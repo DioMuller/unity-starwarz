@@ -42,11 +42,11 @@ GameObject:
   m_Component:
   - 4: {fileID: 400004}
   - 114: {fileID: 11400000}
-  - 114: {fileID: 11400002}
-  - 114: {fileID: 11400004}
   - 65: {fileID: 6500000}
   - 54: {fileID: 5400000}
   - 114: {fileID: 11400006}
+  - 114: {fileID: 11400004}
+  - 114: {fileID: 11400002}
   m_Layer: 0
   m_Name: PlayerShip
   m_TagString: Player
@@ -180,12 +180,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 100004}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1a04bc42d4a7fd749aa0ab9e283cd6b7, type: 3}
+  m_Script: {fileID: 11500000, guid: 9c480378f01d5174587d53f9ef5062cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlasmaShot: {fileID: 400000, guid: ef36c5af3768ce64abdc16ca6d345b9f, type: 2}
-  PlasmaSpawnPosition: {fileID: 400002}
-  ReloadTime: .300000012
+  Shot: {fileID: 400000, guid: 019f7894f68705942afba3bda2248e0f, type: 2}
+  SpawnPosition: {fileID: 400002}
+  ReloadTime: 3
+  ShootButton: Fire1
 --- !u!114 &11400004
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -194,12 +195,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 100004}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 52309d88da4d2c94d9ebab6b07f0ded2, type: 3}
+  m_Script: {fileID: 11500000, guid: 9c480378f01d5174587d53f9ef5062cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MissileShot: {fileID: 400000, guid: 019f7894f68705942afba3bda2248e0f, type: 2}
-  MissileSpawnPosition: {fileID: 400002}
-  ReloadTime: 3
+  Shot: {fileID: 400000, guid: ef36c5af3768ce64abdc16ca6d345b9f, type: 2}
+  SpawnPosition: {fileID: 400002}
+  ReloadTime: .300000012
+  ShootButton: Jump
 --- !u!114 &11400006
 MonoBehaviour:
   m_ObjectHideFlags: 1
