@@ -2351,6 +2351,8 @@ MonoBehaviour:
   explosionEffect: {fileID: 400000, guid: 1945bc54477ae9049990d29fc99b3d0c, type: 2}
   teleportEffect: {fileID: 400000, guid: ac08dc0781c7cd54fa818f1d97f6e20b, type: 2}
   NPC: {fileID: 100030, guid: c7b53634c6f3f7b43bdf3b0d2d05d225, type: 2}
+  NPCLimit: 20
+  NPCCount: 0
   GUIScore: {fileID: 1119573216}
   GUILives: {fileID: 1435987605}
   GUIGameOver: {fileID: 325311369}

@@ -16,6 +16,8 @@ public class Game : MonoBehaviour {
 	public Transform explosionEffect;
     public Transform teleportEffect;
 	public GameObject NPC;
+	public int NPCLimit = 20;
+	public int NPCCount = 0;
 
 	#region GUI
 	public TextMesh GUIScore;
@@ -58,7 +60,7 @@ public class Game : MonoBehaviour {
 		Lives -= lives;
 		GUILives.text = "Lives: " + Lives;
 
-		RespawnShip ();
+		RespawnShip();
 	}
 
 	public void RespawnShip()
@@ -87,10 +89,19 @@ public class Game : MonoBehaviour {
 
 	public void NPCSpawn() 
 	{
+		// Checks if the number of NPCs surpasses the limit
+		if( NPCCount >= NPCLimit ) return;
+
 		float xpos = Random.Range(boundaryBL.position.x, boundaryTR.position.x);
 		Vector3 newSpawnPos = new Vector3(xpos, NPCSpawnRoot.position.y, NPCSpawnRoot.position.z);
-        Instantiate(teleportEffect, newSpawnPos, Quaternion.identity);
+		ShowTeleportEffect(newSpawnPos);
 		var trans = Instantiate(NPC, newSpawnPos, Quaternion.identity) as GameObject;
 		LatestNPCs.Insert (0, trans.transform);
+		NPCCount++;
+	}
+
+	public void ShowTeleportEffect(Vector3 position)
+	{
+		Instantiate(teleportEffect, position, Quaternion.identity);
 	}
 }
