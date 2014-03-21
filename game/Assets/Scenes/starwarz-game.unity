@@ -2349,6 +2349,7 @@ MonoBehaviour:
   boundaryTR: {fileID: 1197848561}
   playerShip: {fileID: 400004, guid: ab81e3a7795d76947a6b7911b30398ed, type: 2}
   explosionEffect: {fileID: 400000, guid: 1945bc54477ae9049990d29fc99b3d0c, type: 2}
+  teleportEffect: {fileID: 400000, guid: ac08dc0781c7cd54fa818f1d97f6e20b, type: 2}
   NPC: {fileID: 100030, guid: c7b53634c6f3f7b43bdf3b0d2d05d225, type: 2}
   GUIScore: {fileID: 1119573216}
   GUILives: {fileID: 1435987605}

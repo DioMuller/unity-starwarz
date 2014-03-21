@@ -14,6 +14,7 @@ public class Game : MonoBehaviour {
 	public Transform boundaryTR;
 	public Transform playerShip;
 	public Transform explosionEffect;
+    public Transform teleportEffect;
 	public GameObject NPC;
 
 	#region GUI
@@ -88,6 +89,7 @@ public class Game : MonoBehaviour {
 	{
 		float xpos = Random.Range(boundaryBL.position.x, boundaryTR.position.x);
 		Vector3 newSpawnPos = new Vector3(xpos, NPCSpawnRoot.position.y, NPCSpawnRoot.position.z);
+        Instantiate(teleportEffect, newSpawnPos, Quaternion.identity);
 		var trans = Instantiate(NPC, newSpawnPos, Quaternion.identity) as GameObject;
 		LatestNPCs.Insert (0, trans.transform);
 	}
