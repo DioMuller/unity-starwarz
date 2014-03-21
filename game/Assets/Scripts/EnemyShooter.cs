@@ -6,6 +6,7 @@ using System.Collections;
 /// </summary>
 public class EnemyShooter : MonoBehaviour 
 {
+	#region Public Attributes
 	/// <summary>
 	/// The enemy shot transform.
 	/// </summary>
@@ -18,7 +19,9 @@ public class EnemyShooter : MonoBehaviour
 	/// The reload time between each shot.
 	/// </summary>
 	public float ReloadTime = 3.0f;
+	#endregion Public Attributes
 
+	#region MonoBehavior Methods
 	/// <summary>
 	/// On wake, this will Invoke Repeating the Shoot method, at each ReloadTime seconds,
 	/// starting on a random time between 0 and ReloadTime.
@@ -30,7 +33,9 @@ public class EnemyShooter : MonoBehaviour
 
 		InvokeRepeating("Shoot", start, ReloadTime);
 	}
+	#endregion MonoBehavior Methods
 
+	#region Public Methods
 	/// <summary>
 	/// Shoots the projectile.
 	/// </summary>
@@ -38,4 +43,5 @@ public class EnemyShooter : MonoBehaviour
 	{
 		Instantiate(EnemyShot, EnemyShotSpawnPosition.position, Quaternion.identity);
 	}
+	#endregion Public Methods
 }

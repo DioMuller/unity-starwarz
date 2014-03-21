@@ -7,11 +7,14 @@ using System.Collections;
 /// </summary>
 public class SeekingMissile : MonoBehaviour 
 {
+	#region Public Attributes
 	/// <summary>
 	/// The rotation speed (Euler).
 	/// </summary>
 	public float rotateSpeed;
-	
+	#endregion Public Attributes
+
+	#region MonoBehaviour Methods
 	/// <summary>
 	/// Rotates the object to the target's position.
 	/// </summary>
@@ -29,4 +32,5 @@ public class SeekingMissile : MonoBehaviour
 			current, rotated, rotateSpeed * dT);
 		}
 	}
+	#endregion MonoBehaviour Methods
 }

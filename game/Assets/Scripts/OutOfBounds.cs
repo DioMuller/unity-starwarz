@@ -7,6 +7,7 @@ using System.Collections;
 /// </summary>
 public class OutOfBounds : MonoBehaviour 
 {
+	#region MonoBehaviour Methods
 	/// <summary>
 	/// If a collision occurs, send a destruction message to the
 	/// other object.
@@ -19,4 +20,5 @@ public class OutOfBounds : MonoBehaviour
 		obstacle.SendMessage(Game.Data.DestroySelfMsg, 
 			SendMessageOptions.DontRequireReceiver);
 	}
+	#endregion MonoBehaviour Methods
 }

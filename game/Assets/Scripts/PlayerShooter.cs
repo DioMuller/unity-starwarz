@@ -36,6 +36,7 @@ public class PlayerShooter : MonoBehaviour
 	private bool _canFire = true;
 	#endregion Private Attributes
 
+	#region MonoBehaviour Methods
 	/// <summary>
 	/// Checks if the player can fire and the fire button is pressed.
 	/// If positive for both, launches a instance of the projectile.
@@ -49,7 +50,9 @@ public class PlayerShooter : MonoBehaviour
 		StartCoroutine(ReloadTimer());
 		Instantiate(Shot, SpawnPosition.position, Quaternion.identity);
 	}
+	#endregion MonoBehaviour Methods
 
+	#region Coroutines
 	/// <summary>
 	/// Waits a defined time and enables the player to shot again.
 	/// </summary>
@@ -59,4 +62,5 @@ public class PlayerShooter : MonoBehaviour
 		yield return new WaitForSeconds(ReloadTime);
 		_canFire = true;
 	}
+	#endregion Coroutines
 }

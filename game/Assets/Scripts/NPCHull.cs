@@ -8,11 +8,14 @@
 /// </summary>
 public class NPCHull : MonoBehaviour 
 {
+	#region Private Attributes
 	/// <summary>
 	/// Object's original position, for when the object is reseted.
 	/// </summary>
 	private Vector3 originalpos;
+	#endregion Private Attributes
 
+	#region MonoBehaviour Methods
 	/// <summary>
 	/// Awake will save the object's original position.
 	/// </summary>
@@ -21,6 +24,24 @@ public class NPCHull : MonoBehaviour
 		originalpos = transform.position;
 	}
 
+	/// <summary>
+	/// Called when other object colides with this object.
+	/// </summary>
+	/// <param name="obstacle">Obstacle's collider.</param>
+	public void OnTriggerEnter(Collider obstacle)
+	{
+		string tag = obstacle.gameObject.tag;
+		//Debug.Log("tag: " + tag);
+		if( tag == "Player" )
+		{
+			obstacle.SendMessage(Game.Data.WasHitMsg);
+			DestroySelfCollision();
+		}
+	}
+
+	#endregion MonoBehaviour Methods
+
+	#region Message Implementations
 	/// <summary>
 	/// Called when the NPC is hit. 
 	/// Increases the score, removes from the Latest NPCs list and creates explosion
@@ -36,17 +57,6 @@ public class NPCHull : MonoBehaviour
 	}
 
 	/// <summary>
-	/// Destroys the object, after collision.
-	/// Used for when the object hits the player.
-	/// </summary>
-	public void DestroySelfCollision() 
-	{
-		Game.Data.LatestNPCs.Remove (transform);
-        Destroy(gameObject);
-		Game.Data.NPCCount--;
-	}
-
-	/// <summary>
 	/// Used for when the object is destroyed by the "Out of Bounds" objects.
 	/// This will make the ship respawn at its original position.
 	/// That will make the game progressively harder when the player starts missing
@@ -56,27 +66,26 @@ public class NPCHull : MonoBehaviour
 	{
 		// Removes from the Latest NPCs list
 		Game.Data.LatestNPCs.Remove (transform);
-
+		
 		// Resets Position
 		transform.position = originalpos;
 		Game.Data.ShowTeleportEffect(originalpos);
-
+		
 		// Adds to the Latest NPCs list, at the top.
 		Game.Data.LatestNPCs.Insert(0, transform);
 	}
+	#endregion Message Implementations
 
+	#region Private Methods
 	/// <summary>
-	/// Called when other object colides with this object.
+	/// Destroys the object, after collision.
+	/// Used for when the object hits the player.
 	/// </summary>
-	/// <param name="obstacle">Obstacle's collider.</param>
-    public void OnTriggerEnter(Collider obstacle)
-    {
-        string tag = obstacle.gameObject.tag;
-        //Debug.Log("tag: " + tag);
-        if( tag == "Player" )
-        {
-            obstacle.SendMessage(Game.Data.WasHitMsg);
-			DestroySelfCollision();
-        }
-    }
+	private void DestroySelfCollision() 
+	{
+		Game.Data.LatestNPCs.Remove (transform);
+        Destroy(gameObject);
+		Game.Data.NPCCount--;
+	}
+	#endregion Private Methods
 }

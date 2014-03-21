@@ -2,11 +2,14 @@
 
 public class Shot : MonoBehaviour 
 {
+	#region Public Attributes
 	/// <summary>
 	/// The target tag. Only targets with this tag will be hit.
 	/// </summary>
 	public string TargetTag = "NPC";
+	#endregion Public Attributes
 
+	#region MonoBehaviour Methods
 	/// <summary>
 	/// Collision Event. If the other object tag is TargetTag,
 	/// send a WasHit message to it.
@@ -21,7 +24,9 @@ public class Shot : MonoBehaviour
 		obstacle.SendMessage(Game.Data.WasHitMsg);
 		DestroySelf();
 	}
+	#endregion MonoBehaviour Methods
 
+	#region Message Implementations
 	/// <summary>
 	/// Implementation of the DestroySelf message.
 	/// Destroys this object.
@@ -31,4 +36,5 @@ public class Shot : MonoBehaviour
 		//Debug.Log("I was destroyed!");
 		Destroy(gameObject);
 	}
+	#endregion Message Implementations
 }

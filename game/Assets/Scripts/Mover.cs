@@ -6,6 +6,7 @@ using System.Collections;
 /// </summary>
 public class Mover : MonoBehaviour 
 {
+	#region Public Attributes
 	/// <summary>
 	/// Movement offset.
 	/// </summary>
@@ -22,7 +23,9 @@ public class Mover : MonoBehaviour
 	/// The maximum percentage for the random offset.
 	/// </summary>
     public float percentageMaxDifference = 2f;
+	#endregion Public Attributes
 
+	#region MonoBehavior Methods
  	/// <summary>
  	/// If the object uses random offsets, randomize the offset.
  	/// </summary>
@@ -42,4 +45,5 @@ public class Mover : MonoBehaviour
 		var dT = Time.deltaTime;
 		transform.Translate(Offset * dT);
 	}
+	#endregion MonoBehavior Methods
 }

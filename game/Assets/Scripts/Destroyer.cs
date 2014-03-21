@@ -6,11 +6,14 @@ using System.Collections;
 /// </summary>
 public class Destroyer : MonoBehaviour 
 {
+	#region Public Attributes
 	/// <summary>
 	/// The wait time before destroying the object.
 	/// </summary>
 	public float WaitTime = 3.0f;
+	#endregion Public Attributes
 
+	#region MonoBehavior Methods
 	/// <summary>
 	/// Starts the Destroy Object coroutine on waking.
 	/// </summary>
@@ -18,7 +21,9 @@ public class Destroyer : MonoBehaviour
 	{
 		StartCoroutine(DestroyAfterDelay());	
 	}
+	#endregion MonoBehavior Methods
 
+	#region Coroutines
 	/// <summary>
 	/// Destroys the object after delay.
 	/// </summary>
@@ -28,4 +33,5 @@ public class Destroyer : MonoBehaviour
 		yield return new WaitForSeconds(WaitTime);
 		Destroy(gameObject);
 	}
+	#endregion Coroutines
 }

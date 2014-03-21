@@ -7,6 +7,7 @@ using System.Collections;
 /// </summary>
 public class PlayerLives : MonoBehaviour 
 {
+	#region Message Implementations
 	/// <summary>
 	/// WasHit message for the player.
 	/// Decreases lives and creates an explosion effect.
@@ -18,4 +19,5 @@ public class PlayerLives : MonoBehaviour
 
 		Destroy(gameObject);
     }
+	#endregion Message Implementations
 }

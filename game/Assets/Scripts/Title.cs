@@ -7,6 +7,7 @@ using System.Collections;
 /// </summary>
 public class Title : MonoBehaviour 
 {
+	#region MonoBehaviour Methods
 	/// <summary>
 	/// Checks if the Jump button is pressed.
 	/// If it is, loads game.
@@ -17,4 +18,5 @@ public class Title : MonoBehaviour
 
 		Application.LoadLevel("starwarz-game");
 	}
+	#endregion MonoBehaviour Methods
 }

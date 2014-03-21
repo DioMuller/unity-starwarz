@@ -5,6 +5,7 @@
 /// </summary>
 public class PlayerMover : MonoBehaviour 
 {
+	#region Public Attributes
 	/// <summary>
 	/// Movement speed.
 	/// </summary>
@@ -19,7 +20,9 @@ public class PlayerMover : MonoBehaviour
 	/// The maximum rotation angle (Euler).
 	/// </summary>
 	public float maxRotationAngle = 60f;
+	#endregion Public Attributes
 
+	#region Private Attributes
 	/// <summary>
 	/// The desired position.
 	/// </summary>
@@ -44,7 +47,9 @@ public class PlayerMover : MonoBehaviour
 	/// The bounds where player can move.
 	/// </summary>
 	private Bounds _bounds;
+	#endregion Public Attributes
 
+	#region MonoBehaviour Methods
 	/// <summary>
 	/// Initializes bounds and calculates rotations in Quaternions.
 	/// </summary>
@@ -54,23 +59,6 @@ public class PlayerMover : MonoBehaviour
 		startRotation = transform.rotation; //Quaternion.identity
 		minRotation = startRotation * Quaternion.Euler(0, 0, maxRotationAngle);
 		maxRotation = startRotation * Quaternion.Euler(0, 0, -maxRotationAngle);
-	}
-
-	/// <summary>
-	/// Calculates player movement bounds.
-	/// </summary>
-	private void CalculateBounds() 
-	{
-		var boundaryTR = Game.Data.boundaryTR;
-		var boundaryBL = Game.Data.boundaryBL;
-
-		_bounds = new Bounds(new Vector3((boundaryTR.position.x + boundaryBL.position.x)/2,
-										 (boundaryTR.position.y + boundaryBL.position.y)/2,
-										 (boundaryTR.position.z + boundaryBL.position.z)/2)
-							 ,
-							 new Vector3(boundaryTR.position.x - boundaryBL.position.x,
-										 boundaryTR.position.y - boundaryBL.position.y,
-										 -boundaryTR.position.z - boundaryBL.position.z));
 	}
 
 	/// <summary>
@@ -100,6 +88,25 @@ public class PlayerMover : MonoBehaviour
 		transform.position = _desiredPosition;
 
 	}
+	#endregion MonoBehaviour Methods
+
+	#region Private Methods
+	/// <summary>
+	/// Calculates player movement bounds.
+	/// </summary>
+	private void CalculateBounds() 
+	{
+		var boundaryTR = Game.Data.boundaryTR;
+		var boundaryBL = Game.Data.boundaryBL;
+		
+		_bounds = new Bounds(new Vector3((boundaryTR.position.x + boundaryBL.position.x)/2,
+		                                 (boundaryTR.position.y + boundaryBL.position.y)/2,
+		                                 (boundaryTR.position.z + boundaryBL.position.z)/2)
+		                     ,
+		                     new Vector3(boundaryTR.position.x - boundaryBL.position.x,
+		            boundaryTR.position.y - boundaryBL.position.y,
+		            -boundaryTR.position.z - boundaryBL.position.z));
+	}
 
 	/// <summary>
 	/// Applies the rotation.
@@ -125,5 +132,6 @@ public class PlayerMover : MonoBehaviour
 		transform.rotation = Quaternion.RotateTowards(
 			transform.rotation, Quaternion.identity, rotateSpeed * 4 * dT);		
 	}
+	#endregion Private Methods
 
 }
