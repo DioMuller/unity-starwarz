@@ -1,17 +1,19 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Title.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\SeekingMissile.cs">
     <Files>
-      <File FileName="Assets\Scripts\PlayerShooter.cs" Line="25" Column="26" />
-      <File FileName="Assets\Scripts\EnemyShooter.cs" Line="5" Column="100" />
-      <File FileName="Assets\Scripts\Game.cs" Line="18" Column="35" />
-      <File FileName="Assets\Scripts\Mover.cs" Line="23" Column="16" />
-      <File FileName="Assets\Scripts\NPCHull.cs" Line="7" Column="1" />
-      <File FileName="Assets\Scripts\OutOfBounds.cs" Line="14" Column="35" />
-      <File FileName="Assets\Scripts\PlayerLives.cs" Line="12" Column="54" />
-      <File FileName="Assets\Scripts\PlayerMover.cs" Line="122" Column="30" />
-      <File FileName="Assets\Scripts\SeekingMissile.cs" Line="17" Column="16" />
-      <File FileName="Assets\Scripts\Title.cs" Line="21" Column="1" />
+      <File FileName="Assets\Scripts\Destroyer.cs" Line="36" Column="6" />
+      <File FileName="Assets\Scripts\PlayerShooter.cs" Line="65" Column="23" />
+      <File FileName="Assets\Scripts\EnemyShooter.cs" Line="46" Column="27" />
+      <File FileName="Assets\Scripts\Game.cs" Line="31" Column="4" />
+      <File FileName="Assets\Scripts\Mover.cs" Line="27" Column="2" />
+      <File FileName="Assets\Scripts\NPCHull.cs" Line="54" Column="49" />
+      <File FileName="Assets\Scripts\OutOfBounds.cs" Line="12" Column="62" />
+      <File FileName="Assets\Scripts\PlayerLives.cs" Line="24" Column="1" />
+      <File FileName="Assets\Scripts\PlayerMover.cs" Line="121" Column="27" />
+      <File FileName="Assets\Scripts\SeekingMissile.cs" Line="24" Column="18" />
+      <File FileName="Assets\Scripts\Title.cs" Line="23" Column="1" />
+      <File FileName="Assets\Scripts\Shot.cs" Line="41" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

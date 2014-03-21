@@ -333,7 +333,7 @@ ParticleSystemRenderer:
   m_SortingOrder: 0
   m_SortingLayerID: 0
   m_RenderMode: 1
-  m_MaxParticleSize: .5
+  m_MaxParticleSize: 131
   m_CameraVelocityScale: 0
   m_VelocityScale: .0199999996
   m_LengthScale: 2
@@ -521,7 +521,7 @@ ParticleSystem:
         rgba: 4294967295
       minMaxState: 0
     startSize:
-      scalar: .0500000007
+      scalar: .200000003
       maxCurve:
         serializedVersion: 2
         m_Curve:
